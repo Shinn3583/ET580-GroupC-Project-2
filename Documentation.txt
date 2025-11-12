@@ -1,5 +1,5 @@
 ET580 Project Documentation
-Group Members:Zhiyi Chen    Saqibur Rahman   Gabriel Sencion   
+Group Members:Zhiyi Chen    Saqibur Rahman   Gabriel Sencion    Sikder Ishaq
 
 Assignments:
 
@@ -7,12 +7,14 @@ Task 2      Zhiyi Chen
 Task 3      Zhiyi Chen
 Task 4      Saqibur Rahman
 Task 5      Gabriel Sencion
-Task 6      Zhiyi Chen  Functions empty - push_back
-            Gabriel Sencion  Functions pop_front - erase
-            Saqibur Rahman Functions print - find
+Task 6      Gabriel Sencion  Functions empty - push_front
+            Zhiyi Chen  Functions push_back -pop front
+            Saqibur Rahman Functions print
+            Sikder Ishaq   Functions Find 
+
 Task 7            All Do after 6
 Task 8            All Do driver.cpp
-
+Task 9      Sikder Ishaq
 Documentation as we go
 
 B. Files : Contributors
