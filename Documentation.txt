@@ -24,7 +24,7 @@ B. Files : Contributors
 3.
 4.
 5.
-6.
+6.Adding some member functions in header files for step 7
 7.
 8.
 9.
