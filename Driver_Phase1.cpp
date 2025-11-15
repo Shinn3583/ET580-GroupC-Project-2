@@ -14,6 +14,13 @@ int main() {
     std::cout << "List contents: ";
     L.print();
 
+    std::cout << "Pushing back values 40, 50...\n";
+    L.push_back(40);
+    L.push_back(50);
+
+    std::cout << "List contents: ";
+    L.print();
+
 
     return 0;
 }

@@ -29,6 +29,9 @@ Iterator List::end() {
     return Iterator(nullptr);
 }
 
+
+
+
 bool List::empty() {                    //Gabriel adding implementations of functions empty, push front, and print 11/14/25
 
     return head == nullptr;
@@ -41,6 +44,20 @@ void List::push_front(int value) {
     head = n;
     
     if (tail == nullptr) {
+        tail = n;
+    }
+    
+}
+
+void List::push_back(int value) {           //Gabriel adding push back to cpp 11/14/25
+
+    Node* n = new Node(value);
+
+    if (tail == nullptr) {
+        head = tail = n;
+    }
+    else {
+        tail->next = n;
         tail = n;
     }
     
