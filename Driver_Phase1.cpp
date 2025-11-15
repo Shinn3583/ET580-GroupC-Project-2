@@ -39,6 +39,6 @@ int main() {
         std::cout << "Value not found.\n";
     }
 
-    std::cout << "Phase I driver tests (tasks 8 & 9) completed.\n";
+    std::cout << "Phase I completed. \n";
     return 0;
 }

@@ -7,11 +7,8 @@ Task 2      Zhiyi Chen
 Task 3      Zhiyi Chen
 Task 4      Saqibur Rahman
 Task 5      Gabriel Sencion
-Task 6      Gabriel Sencion  Functions empty - push_front
+Task 6      Gabriel Sencion  Functions empty - push_front - print
             Zhiyi Chen  Functions push_back -pop front
-            Saqibur Rahman Functions print
-            Sikder Ishaq   Functions Find 
-
 Task 7            All Do after 6
 Task 8            All Do driver.cpp
 Task 9      Sikder Ishaq
