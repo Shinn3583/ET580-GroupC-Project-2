@@ -28,3 +28,32 @@ Iterator List::begin() {
 Iterator List::end() {
     return Iterator(nullptr);
 }
+
+bool List::empty() {                    //Gabriel adding implementations of functions empty, push front, and print 11/14/25
+
+    return head == nullptr;
+}
+
+void List::push_front(int value) {
+
+    Node* n = new Node(value);
+    n->next = head;
+    head = n;
+    
+    if (tail == nullptr) {
+        tail = n;
+    }
+    
+}
+
+
+void List::print() {
+
+    Node* p = head;
+
+    while (p != nullptr) {
+        std::cout << p->data << " " ;
+        p = p->next;
+    }
+    std::cout << std::endl;
+}

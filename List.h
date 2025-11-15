@@ -17,6 +17,10 @@ public:
     List();       // construct an empty list
     ~List();      // destructor: safely delete all nodes
 
+    bool empty();                           //Gabriel adding member functions step 6: empty, push front, and print 11/14/25
+    void push_front(int value);
+    void print();
+
     Iterator begin();   // iterator pointing to first node
     Iterator end();     // iterator pointing past the end (nullptr)
 };
