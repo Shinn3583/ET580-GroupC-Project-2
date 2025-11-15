@@ -10,6 +10,8 @@ class Iterator {
 private:
     Node* current;     // target node
 
+        // Allow List to access iterator internals (Phase I step 5)
+    friend class List;
 
 public:
     explicit Iterator(Node* start);  // point iterator to specific node
@@ -18,8 +20,5 @@ public:
     bool hasNext() const;     // true if current != nullptr
     int& getData();           // reference to current node's data
 };
-
-    // Future: List class will need access to Iterator internals
-    friend class List;
 
 #endif

@@ -74,3 +74,21 @@ void List::print() {
     }
     std::cout << std::endl;
 }
+
+
+
+
+}
+
+
+
+Iterator List::find(int value) { // Sikder Ishaq 11/15: linear search for value
+    Node* p = head;
+    while (p != nullptr) {
+        if (p->data == value) {
+            return Iterator(p);
+        }
+        p = p->next;
+    }
+    return end();
+}

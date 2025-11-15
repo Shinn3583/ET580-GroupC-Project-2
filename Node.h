@@ -11,6 +11,10 @@ class Node {
 private:
     int data;     // stores the value
     Node* next;   // pointer to the next node
+  //Sikder
+    // Grant access to List and Iterator internals for encapsulated operations
+    friend class List;
+    friend class Iterator;
 
 
 public:
@@ -18,7 +22,4 @@ public:
     Node(const int& d);   // parameterized constructor
 };
 
-    // Future steps: List and Iterator will need access to these
-    friend class List;
-    friend class Iterator;
 #endif

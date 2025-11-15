@@ -31,3 +31,12 @@ B. Files : Contributors
 10.
 
 C. Known Problems or Incomplete Code
+
+- 11/15 – Phase I Tasks 8 and 9 (Sikder Ishaq) ---
+- Implemented and documented driver tests in `Driver_Phase1.cpp` 
+  - Use `empty`, `push_front`, `push_back`, `print`.
+  - Traverse with iterator (`begin`, `hasNext`, `next`, `getData`).
+  - Demonstrate `find` only 
+- Fixed encapsulation access 
+- Corrected `Makefile` target names and dependencies; validated build via `g++` on Windows.
+- Verified a clean compile and successful run; output shows functions working.
