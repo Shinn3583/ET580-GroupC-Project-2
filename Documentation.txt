@@ -2,7 +2,7 @@ ET580 Project Documentation
 Group Members:Zhiyi Chen    Saqibur Rahman   Gabriel Sencion    Sikder Ishaq
 
 Assignments:
-
+Phase1
 Task 2      Zhiyi Chen
 Task 3      Zhiyi Chen
 Task 4      Saqibur Rahman
@@ -13,6 +13,16 @@ Task 7            All Do after 6
 Task 8            All Do driver.cpp
 Task 9      Sikder Ishaq
 Documentation as we go
+
+Phase2:
+ Task 2        Zhiyi Chen
+ Task 3        Zhiyi  Chen
+ Task 4        Sikdar
+ Task 5        Saqibur
+ Task 6        Gabriel  
+ Task 7        Gabriel
+ Task 8        Everyone do his work in main
+ Documenatation Everyone should write down commits in documentation by name and dates
 
 B. Files : Contributors
 1. Commit 1   Zhiyi Chen    Shell Files  Task 2&3  Clean Compile
@@ -25,7 +35,17 @@ B. Files : Contributors
 7.
 8.
 9.
-10.
+10.Commit 10 Zhiyi 11/18 Assign work in documentation for people 
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
 
 C. Known Problems or Incomplete Code
 
@@ -37,3 +57,7 @@ C. Known Problems or Incomplete Code
 - Fixed encapsulation access 
 - Corrected `Makefile` target names and dependencies; validated build via `g++` on Windows.
 - Verified a clean compile and successful run; output shows functions working.
+
+
+
+ 
