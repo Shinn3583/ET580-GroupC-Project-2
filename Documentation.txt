@@ -36,7 +36,7 @@ B. Files : Contributors
 8.
 9.
 10.Commit 10 Zhiyi 11/18 Assign work in documentation for people 
-11.
+11.Commit 11 Zhiyi 11/18 Task 2 & 3 finished by adding driverphase2.cpp and update makefile.
 12.
 13.
 14.
