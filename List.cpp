@@ -1,4 +1,4 @@
-// Zhiyi Chen 11/11 Commit#1
+// list.cpp // Zhiyi Chen 11/11 Commit#1
 #include "List.h"
 
 // Saqibur Rahman
@@ -29,27 +29,30 @@ Iterator List::end() {
     return Iterator(nullptr);
 }
 
-
-
-
-bool List::empty() {                    //Gabriel adding implementations of functions empty, push front, and print 11/14/25
-
+// Gabriel implementation preserved
+bool List::empty() {
     return head == nullptr;
 }
 
-void List::push_front(int value) {
+// Saqibur Rahman — Phase II Task 5
+House& List::front() {
+    return head->data;
+}
+
+// Gabriel push_front updated by Saqibur
+void List::push_front(const House& value) {
 
     Node* n = new Node(value);
     n->next = head;
     head = n;
-    
+
     if (tail == nullptr) {
         tail = n;
     }
-    
 }
 
-void List::push_back(int value) {           //Gabriel adding push back to cpp 11/14/25
+// Gabriel push_back updated by Saqibur
+void List::push_back(const House& value) {
 
     Node* n = new Node(value);
 
@@ -60,32 +63,28 @@ void List::push_back(int value) {           //Gabriel adding push back to cpp 11
         tail->next = n;
         tail = n;
     }
-    
 }
 
-
+// Saqibur Rahman — Phase II Task 5: print using House::print()
 void List::print() {
 
     Node* p = head;
 
     while (p != nullptr) {
-        std::cout << p->data << " " ;
+        p->data.print();
+        std::cout << " ";
         p = p->next;
     }
     std::cout << std::endl;
 }
 
+// Sikder Ishaq find modified for House
+Iterator List::find(const House& value) {
 
-
-
-
-
-
-
-Iterator List::find(int value) { // Sikder Ishaq 11/15: linear search for value
     Node* p = head;
+
     while (p != nullptr) {
-        if (p->data == value) {
+        if (equivalence(p->data, value)) {   // House equivalence
             return Iterator(p);
         }
         p = p->next;

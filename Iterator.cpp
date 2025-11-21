@@ -1,4 +1,4 @@
-// Zhiyi Chen 11/11 Commit#1
+// iterator.cpp // Zhiyi Chen 11/11 Commit#1
 #include "Iterator.h"
 
 // Saqibur Rahman
@@ -17,6 +17,7 @@ bool Iterator::hasNext() const {
     return current != nullptr;
 }
 
-int& Iterator::getData() {
+// Saqibur Rahman — Phase II Task 5
+House& Iterator::getData() {
     return current->data;
 }

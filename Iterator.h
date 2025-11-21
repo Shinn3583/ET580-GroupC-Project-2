@@ -1,4 +1,4 @@
-// Zhiyi Chen 11/11 Commit#1
+// iterator.h  // Zhiyi Chen 11/11 Commit#1
 #ifndef ITERATOR_H
 #define ITERATOR_H
 
@@ -8,17 +8,19 @@
 
 class Iterator {
 private:
-    Node* current;     // target node
+    Node* current;
 
-        // Allow List to access iterator internals (Phase I step 5)
+    // Phase I Step 5
     friend class List;
 
 public:
-    explicit Iterator(Node* start);  // point iterator to specific node
+    explicit Iterator(Node* start);
 
-    void next();              // advance iterator to next node
-    bool hasNext() const;     // true if current != nullptr
-    int& getData();           // reference to current node's data
+    void next();
+    bool hasNext() const;
+
+    // Saqibur Rahman — Phase II Task 5: return House instead of int
+    House& getData();
 };
 
 #endif

@@ -1,12 +1,12 @@
-// Zhiyi Chen 11/11 Commit#1
+// node.cpp // Zhiyi Chen 11/11 Commit#1
 #include "Node.h"
 
-// Saqibur Rahman
+// Saqibur Rahman — Phase II Task 5 implementation
 
 Node::Node()
-    : data(0), next(nullptr) {
+    : data(House()), next(nullptr) {
 }
 
-Node::Node(const int& d)
+Node::Node(const House& d)
     : data(d), next(nullptr) {
 }

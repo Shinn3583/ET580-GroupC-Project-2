@@ -1,4 +1,4 @@
-// Zhiyi Chen 11/11 Commit#1
+// list.h // Zhiyi Chen 11/11 Commit#1
 #ifndef LIST_H
 #define LIST_H
 
@@ -10,30 +10,35 @@
 
 class List {
 private:
-    Node* head;   // pointer to first node
-    Node* tail;   // pointer to last node
+    Node* head;
+    Node* tail;
 
 public:
-    List();       // construct an empty list
-    ~List();      // destructor: safely delete all nodes
+    List();
+    ~List();
 
-    bool empty();                           //Gabriel adding member functions step 6: empty, push front, and print 11/14/25
-    int& front();
-    void push_front(int value);
-    void push_back(int value);              //Gabriel adding member function push back 11/14/25
-    //Zhiyi added functions
+    bool empty();   // Gabriel
+
+    // Saqibur Rahman — Phase II Task 5
+    House& front();
+
+    void push_front(const House& value);  // changed to House
+    void push_back(const House& value);   // changed to House
+
     void pop_front();
-    Iterator insertAfter(Iterator it, const int value);
+    Iterator insertAfter(Iterator it, const House& value);
     Iterator eraseAfter(Iterator it);
-    Iterator begin();                         // iterator pointing to first node
-    Iterator end();                          // iterator pointing past the end (nullptr)
-    Iterator find(int value);
+
+    Iterator begin();
+    Iterator end();
+
+    // Sikder’s find adapted by Saqibur
+    Iterator find(const House& value);
+
     void duplicate(List &other) const;
     void print();
 
-
     friend class Iterator;
- 
 };
 
 #endif
