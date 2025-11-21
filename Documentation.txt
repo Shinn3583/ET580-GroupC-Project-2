@@ -17,7 +17,7 @@ Documentation as we go
 Phase2:
  Task 2        Zhiyi Chen
  Task 3        Zhiyi  Chen
- Task 4        Sikdar
+ Task 4        Sikder Ishaq
  Task 5        Saqibur
  Task 6        Gabriel  
  Task 7        Gabriel
@@ -37,7 +37,7 @@ B. Files : Contributors
 9.
 10.Commit 10 Zhiyi 11/18 Assign work in documentation for people 
 11.Commit 11 Zhiyi 11/18 Task 2 & 3 finished by adding driverphase2.cpp and update makefile.
-12.
+12.Commit 12 Sikder Ishaq 11/21 Implemented Phase II Task 4: added House.h/House.cpp encapsulated class with constructors, accessors, mutators, print, non-member equivalence/compare.
 13.
 14.
 15.
