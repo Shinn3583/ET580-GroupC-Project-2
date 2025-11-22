@@ -41,7 +41,7 @@ B. Files : Contributors
 13.Commit 13 Saqibur Rahman 11/21 Phase II Task 5 completed: converted Node, List, Iterator from int to House data type and updated container functions accordingly.
 14.Commit 14 Gabriel Sencion 11/22 Step 6 completed: adding values to the data.csv, comenting errors in driver_phase1 
 15.Commit 15 Gabriel Sencion 11/22 Step 7 done: added read function to driverphase2, updated Makefile, updated House.cpp print function
-16.
+16.Commit 16 Zhiyi Chen 11/23 Step8 done: added House Class Functions,Utility function and list operations.
 17.
 18.
 19.
