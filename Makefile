@@ -4,15 +4,15 @@
 #Gabriel fixing Makefile again syntax
 #Zhiyi Chen 11/18 Commit 11
 #Zhiyi Chen 11/18 update makefile 
-prog : Driver_Phase1.o Node.o Iterator.o List.o
-	g++ -std=c++11 -o prog Driver_Phase1.o Node.o Iterator.o List.o
+prog : Driver_Phase2.o Node.o Iterator.o List.o House.o
+	g++ -std=c++11 -o prog Driver_Phase2.o Node.o Iterator.o List.o House.o
 
 # file dependencies
-Driver_Phase1.o : List.h Iterator.h Node.h	
-	g++ -std=c++11 -c Driver_Phase1.cpp
-
 Driver_Phase2.o : List.h Iterator.h Node.h	
 	g++ -std=c++11 -c Driver_Phase2.cpp
+
+Driver_Phase1.o : List.h Iterator.h Node.h	
+	g++ -std=c++11 -c Driver_Phase1.cpp
 		
 
 List.o : Node.h Iterator.h List.h
@@ -24,7 +24,10 @@ Iterator.o : Iterator.h Node.h
 Node.o : Node.h
 	g++ -std=c++11 -c Node.cpp
 
+House.o : House.h 
+	g++ -std=c++11 -c House.cpp 
+
 # files to remove
 clean:
-	rm -f Driver_Phase1.o Node.o Iterator.o List.o
+	rm -f Driver_Phase1.o Driver_Phase2.o Node.o Iterator.o List.o House.o
 	rm -f prog 

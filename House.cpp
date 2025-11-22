@@ -16,7 +16,7 @@ void House::setYear(int y) { year = y; }
 
 // Print
 void House::print() const {
-    std::cout << "House(size=" << size << ", year=" << year << ")";
+    std::cout << "House(size=" << size << ", year=" << year << ")" << std::endl;
 }
 
 // Non-member implementations
