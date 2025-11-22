@@ -39,7 +39,7 @@ B. Files : Contributors
 11.Commit 11 Zhiyi 11/18 Task 2 & 3 finished by adding driverphase2.cpp and update makefile.
 12.Commit 12 Sikder Ishaq 11/21 Implemented Phase II Task 4: added House.h/House.cpp encapsulated class with constructors, accessors, mutators, print, non-member equivalence/compare.
 13.Commit 13 Saqibur Rahman 11/21 Phase II Task 5 completed: converted Node, List, Iterator from int to House data type and updated container functions accordingly.
-14.
+14.Commit 14 Gabriel Sencion 11/22 Step 6 completed: adding values to the data.csv, comenting errors in driver_phase1 
 15.
 16.
 17.
