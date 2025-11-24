@@ -4,6 +4,7 @@
 #Gabriel fixing Makefile again syntax
 #Zhiyi Chen 11/18 Commit 11
 #Zhiyi Chen 11/18 update makefile 
+#Sikder 11/24 update
 prog : Driver_Phase2.o Node.o Iterator.o List.o House.o
 	g++ -std=c++11 -o prog Driver_Phase2.o Node.o Iterator.o List.o House.o
 
@@ -14,6 +15,8 @@ Driver_Phase2.o : List.h Iterator.h Node.h
 Driver_Phase1.o : List.h Iterator.h Node.h	
 	g++ -std=c++11 -c Driver_Phase1.cpp
 		
+prog1 : Driver_Phase1.o Node.o Iterator.o List.o House.o
+	g++ -std=c++11 -o prog1 Driver_Phase1.o Node.o Iterator.o List.o House.o
 
 List.o : Node.h Iterator.h List.h
 	g++ -std=c++11 -c List.cpp
@@ -30,4 +33,4 @@ House.o : House.h
 # files to remove
 clean:
 	rm -f Driver_Phase1.o Driver_Phase2.o Node.o Iterator.o List.o House.o
-	rm -f prog 
+	rm -f prog prog1

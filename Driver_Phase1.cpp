@@ -1,44 +1,61 @@
 //Zhiyi Chen 11/11 Commit#1
+//  Phase I Driver Updated 
 #include <iostream>
 #include "List.h"
+#include "House.h"
+
 //Gabriel adding main functions and updating driver file 11/14/25
 // Sikder Ishaq 11/15: Phase I tasks 8 & 9 with find only
 
 int main() {
     List L;
+   // Empty check
+    std::cout << "List initially empty? " << (L.empty() ? "Yes" : "No") << '\n';
 
-    std::cout << "List initially empty? " << (L.empty() ? "yes" : "no") << "\n"; //Sikder
-    std::cout << "Pushing front values 10, 20, 30...\n";                //Gabriel adding the push front and print 11/14/25
-    //L.push_front(10);
-   // L.push_front(20);
-  //  L.push_front(30);
+    // Push front (two houses)
+    L.push_front(House(1200, 2005));
+    L.push_front(House(800, 1995));
 
+
+      // Push back (two houses)
+    L.push_back(House(1500, 2010));
+    L.push_back(House(1800, 2015));
+
+
+    // Print list
     std::cout << "List contents: ";
     L.print();
 
-    std::cout << "Pushing back values 40, 50...\n";
-   // L.push_back(40);
-   // L.push_back(50);
+    // Front element
+    std::cout << "Front element: ";
+    L.front().print();
 
-    std::cout << "List contents: ";
-    L.print();
+    // Traverse via iterator
+    std::cout << "Traverse with iterator:\n";
+    for (Iterator it = L.begin(); it.hasNext(); it.next()) {
+        it.getData().print();
+    }
 
-// Sikder Phase 1 
-     // Traverse via iterator
-    std::cout << "Traverse with iterator: ";
-   /* for (Iterator it = L.begin(); it.hasNext(); it.next()) {
-        std::cout << it.getData() << ' ';
-    }*/
-    std::cout << "\n";
-
-    // Demonstrate find
-    /*Iterator pos = L.find(20);
+    // Demonstrate find (existing)
+    std::cout << "Find (1500,2010): ";
+    Iterator pos = L.find(House(1500, 2010));
     if (pos.hasNext()) {
-        std::cout << "Found value: " << pos.getData() << "\n";
+        std::cout << "Found: ";
+        pos.getData().print();
     } else {
-        std::cout << "Value not found.\n";
-    }*/
+        std::cout << "Not found\n";
+    }
 
-    std::cout << "Phase I completed. \n";
+    // Demonstrate find (missing)
+    std::cout << "Find (9999,1999): ";
+    Iterator miss = L.find(House(9999, 1999));
+    if (miss.hasNext()) {
+        std::cout << "Found: ";
+        miss.getData().print();
+    } else {
+        std::cout << "Not found\n";
+    }
+
+    std::cout << "Phase I completed.\n";
     return 0;
 }
