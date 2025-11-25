@@ -24,6 +24,14 @@ Phase2:
  Task 8        Everyone do his work in main
  Documenatation Everyone should write down commits in documentation by name and dates
 
+Phase 3:
+ Task 1       Sikder Ishaq
+ Task 2       Sikder Ishaq
+ Task 3       Gabriel
+ Task 4       Saqibur
+ Task 5       Zhiyi Chen
+ Task 6       Sikder Ishaq
+ Task 7       Everyone do his work in main
 B. Files : Contributors
 1. Commit 1   Zhiyi Chen    Shell Files  Task 2&3  Clean Compile
 2.Completed Phase 1 – Step 4 by converting Node, List, and Iterator from struct to encapsulated classes with private data members — Saqibur Rahman
@@ -42,7 +50,7 @@ B. Files : Contributors
 14.Commit 14 Gabriel Sencion 11/22 Step 6 completed: adding values to the data.csv, comenting errors in driver_phase1 
 15.Commit 15 Gabriel Sencion 11/22 Step 7 done: added read function to driverphase2, updated Makefile, updated House.cpp print function
 16.Commit 16 Zhiyi Chen 11/23 Step8 done: added House Class Functions,Utility function and list operations.
-17.
+17.Commit 17 Zhiyi Chen 11/25 Assign work in documentation
 18.
 19.
 20.
