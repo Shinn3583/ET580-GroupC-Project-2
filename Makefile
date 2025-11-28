@@ -4,19 +4,25 @@
 #Gabriel fixing Makefile again syntax
 #Zhiyi Chen 11/18 Commit 11
 #Zhiyi Chen 11/18 update makefile 
-#Sikder 11/24 update
+#Sikder Ishaq — comments added 11/28: Phase 3 driver target and clean rules
 prog : Driver_Phase2.o Node.o Iterator.o List.o House.o
-	g++ -std=c++11 -o prog Driver_Phase2.o Node.o Iterator.o List.o House.o
+    g++ -std=c++11 -o prog Driver_Phase2.o Node.o Iterator.o List.o House.o
 
 # file dependencies
-Driver_Phase2.o : List.h Iterator.h Node.h	
-	g++ -std=c++11 -c Driver_Phase2.cpp
+Driver_Phase2.o : List.h Iterator.h Node.h 
+    g++ -std=c++11 -c Driver_Phase2.cpp
 
-Driver_Phase1.o : List.h Iterator.h Node.h	
-	g++ -std=c++11 -c Driver_Phase1.cpp
-		
+Driver_Phase3.o : List.h Iterator.h Node.h 
+    g++ -std=c++11 -c Driver_Phase3.cpp
+
+Driver_Phase1.o : List.h Iterator.h Node.h 
+    g++ -std=c++11 -c Driver_Phase1.cpp
+        
 prog1 : Driver_Phase1.o Node.o Iterator.o List.o House.o
-	g++ -std=c++11 -o prog1 Driver_Phase1.o Node.o Iterator.o List.o House.o
+    g++ -std=c++11 -o prog1 Driver_Phase1.o Node.o Iterator.o List.o House.o
+
+prog3 : Driver_Phase3.o Node.o Iterator.o List.o House.o
+    g++ -std=c++11 -o prog3 Driver_Phase3.o Node.o Iterator.o List.o House.o
 
 List.o : Node.h Iterator.h List.h
 	g++ -std=c++11 -c List.cpp
@@ -32,5 +38,5 @@ House.o : House.h
 
 # files to remove
 clean:
-	rm -f Driver_Phase1.o Driver_Phase2.o Node.o Iterator.o List.o House.o
-	rm -f prog prog1
+    rm -f Driver_Phase1.o Driver_Phase2.o Driver_Phase3.o Node.o Iterator.o List.o House.o
+    rm -f prog prog1 prog3

@@ -65,6 +65,38 @@ void List::push_back(const House& value) {
     }
 }
 
+void List::pop_front() {
+    // Sikder Ishaq — remove head node and update tail if list becomes empty
+    if (head == nullptr) return;
+    Node* n = head;
+    head = head->next;
+    if (head == nullptr) tail = nullptr;
+    delete n;
+}
+
+Iterator List::insertAfter(Iterator it, const House& value) {
+    // Sikder Ishaq — insert new node immediately after iterator's current node
+    Node* curr = it.current;
+    if (curr == nullptr) return end();
+    Node* n = new Node(value);
+    n->next = curr->next;
+    curr->next = n;
+    if (tail == curr) tail = n;
+    return Iterator(n);
+}
+
+Iterator List::eraseAfter(Iterator it) {
+    // Sikder Ishaq — erase node immediately after iterator's current node
+    Node* curr = it.current;
+    if (curr == nullptr || curr->next == nullptr) return end();
+    Node* target = curr->next;
+    curr->next = target->next;
+    if (target == tail) tail = curr;
+    Iterator result(curr->next);
+    delete target;
+    return result;
+}
+
 // Saqibur Rahman — Phase II Task 5: print using House::print()
 void List::print() {
 
