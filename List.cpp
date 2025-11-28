@@ -91,3 +91,31 @@ Iterator List::find(const House& value) {
     }
     return end();
 }
+
+// Implemented duplicate: Sikder Phase 2
+void List::duplicate(List &other) const {
+    // Clear 'other' list
+    Node* p = other.head;
+    while (p != nullptr) {
+        Node* tmp = p;
+        p = p->next;
+        delete tmp;
+    }
+    other.head = nullptr;
+    other.tail = nullptr;
+
+    // Copy nodes from this list
+    Node* src = head;
+    Node* last = nullptr;
+    while (src != nullptr) {
+        Node* n = new Node(src->data); // copy House by value
+        if (last == nullptr) {
+            other.head = n;
+        } else {
+            last->next = n;
+        }
+        last = n;
+        src = src->next;
+    }
+    other.tail = last;
+}
