@@ -41,6 +41,9 @@ public:
     void duplicate(List &other) const;
     void print();
 
+    // Saqibur Rahman — Phase III Task 4
+    int getSize() const;
+
     friend class Iterator;
 };
 

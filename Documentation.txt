@@ -53,7 +53,8 @@ B. Files : Contributors
 17.Commit 17 Zhiyi Chen 11/25 Assign work in documentation
 18.
 19.Commit 19 Gabriel Sencion 11/28 step 3 done: added data mamber 'size' to class List, initialized to 0 in List cpp, added all necessary operations to all appropriate functions in List cpp.
-20.
+20.Commit 20 Saqibur Rahman 11/29 Phase III Task 4 completed: added List::getSize() and Driver_Phase3.cpp tests for size tracking.
+
 
 C. Known Problems or Incomplete Code
 

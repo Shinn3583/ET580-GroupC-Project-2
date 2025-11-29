@@ -160,3 +160,10 @@ void List::duplicate(List &other) const {
     }
     other.tail = last;
 }
+
+// Function: getSize
+// Author: Saqibur Rahman — Phase III Task 4
+// Description: Returns the current number of nodes stored in the list.
+int List::getSize() const {
+    return size;
+}
