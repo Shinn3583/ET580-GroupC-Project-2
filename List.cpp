@@ -176,3 +176,64 @@ void List::clear() {
     tail = nullptr;
     size = 0;
 }
+
+// Sikder Ishaq — Phase III Task 6
+// Algorithm: sortedInsert
+// Inserts House 'd' into 'list' maintaining sorted order based on 'comparator'.
+// comparator=true  -> small to large; comparator=false -> large to small.
+void List::sortedInsert(List &list, const House &d, bool comparator) {
+    // Case: empty list or insert before head
+    if (list.head == nullptr || compare(d, list.head->data, comparator)) {
+        list.push_front(d);
+        return;
+    }
+
+    // Traverse until the correct position (after nodes that should come before 'd')
+    Node* prev = list.head;
+    Node* curr = list.head->next;
+    while (curr != nullptr && compare(curr->data, d, comparator)) {
+        prev = curr;
+        curr = curr->next;
+    }
+
+    // Insert between prev and curr (or at tail)
+    Iterator it(prev);
+    list.insertAfter(it, d);
+}
+
+// Sikder Ishaq — Phase III Task 6
+// Algorithm: binarySearch
+// Performs binary search for House 'd' in a sorted 'list' according to 'comparator'.
+// Returns Iterator to the found node; otherwise returns end().
+Iterator List::binarySearch(List &list, const House &d, bool comparator) {
+    int low = 0;
+    int high = list.size - 1;
+
+    // Helper to access node by index (walk from head)
+    auto nodeAt = [&](int index) -> Node* {
+        Node* p = list.head;
+        for (int i = 0; i < index && p != nullptr; ++i) {
+            p = p->next;
+        }
+        return p;
+    };
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        Node* m = nodeAt(mid);
+        if (m == nullptr) break;  // safety
+
+        // Check for exact match using equivalence
+        if (equivalence(m->data, d)) {
+            return Iterator(m);
+        }
+
+        // Decide search side based on sort order
+        if (compare(m->data, d, comparator)) {
+            low = mid + 1;   // go right
+        } else {
+            high = mid - 1;  // go left
+        }
+    }
+    return list.end();
+}

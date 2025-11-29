@@ -47,6 +47,10 @@ public:
     // PHASE 3 STEP 5: Clear function - Zhiyi Chen
     void clear();
 
+    // Sikder Ishaq — Phase III Task 6: algorithm implementations
+    static void sortedInsert(List &list, const House &d, bool comparator);
+    static Iterator binarySearch(List &list, const House &d, bool comparator);
+
     friend class Iterator;
 };
 
