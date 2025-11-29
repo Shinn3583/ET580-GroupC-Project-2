@@ -8,17 +8,7 @@ List::List()
 }
 
 List::~List() {
-    Node* n = head;
-    Node* backup = nullptr;
-
-    while (n != nullptr) {
-        backup = n;
-        n = n->next;
-        delete backup;
-    }
-
-    head = nullptr;
-    tail = nullptr;
+    clear();  // Zhiyi Chen PHASE 3 STEP 5: Use clear() instead of manual deletion
 }
 
 Iterator List::begin() {
@@ -166,4 +156,23 @@ void List::duplicate(List &other) const {
 // Description: Returns the current number of nodes stored in the list.
 int List::getSize() const {
     return size;
+}
+
+// Zhiyi Chen PHASE 3 STEP 5: Clear function implementation
+
+void List::clear() {
+    Node* current = head;
+    Node* nextNode = nullptr;
+
+    // Delete all nodes
+    while (current != nullptr) {
+        nextNode = current->next;
+        delete current;
+        current = nextNode;
+    }
+
+    // Reset pointers and size
+    head = nullptr;
+    tail = nullptr;
+    size = 0;
 }

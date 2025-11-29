@@ -44,6 +44,9 @@ public:
     // Saqibur Rahman — Phase III Task 4
     int getSize() const;
 
+    // PHASE 3 STEP 5: Clear function - Zhiyi Chen
+    void clear();
+
     friend class Iterator;
 };
 
