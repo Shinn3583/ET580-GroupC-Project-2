@@ -4,7 +4,7 @@
 // Saqibur Rahman
 
 List::List()
-    : head(nullptr), tail(nullptr) {
+    : head(nullptr), tail(nullptr), size(0) {       //Gabriel Phase III updating constructor by adding size 11/28/25
 }
 
 List::~List() {
@@ -49,6 +49,8 @@ void List::push_front(const House& value) {
     if (tail == nullptr) {
         tail = n;
     }
+
+    size++;             //Gabriel Phase III adding increment operation to function 11/28/25
 }
 
 // Gabriel push_back updated by Saqibur
@@ -63,6 +65,8 @@ void List::push_back(const House& value) {
         tail->next = n;
         tail = n;
     }
+
+    size++;     //Gabriel Phase III adding increment operation to function 11/28/25
 }
 
 void List::pop_front() {
@@ -72,6 +76,7 @@ void List::pop_front() {
     head = head->next;
     if (head == nullptr) tail = nullptr;
     delete n;
+    size--;         //Gabriel Phase III adding decrement operation to function 11/28/25
 }
 
 Iterator List::insertAfter(Iterator it, const House& value) {
@@ -82,6 +87,8 @@ Iterator List::insertAfter(Iterator it, const House& value) {
     n->next = curr->next;
     curr->next = n;
     if (tail == curr) tail = n;
+
+    size++;                 //Gabriel Phase III adding increment operation to function 11/28/25
     return Iterator(n);
 }
 
@@ -94,6 +101,8 @@ Iterator List::eraseAfter(Iterator it) {
     if (target == tail) tail = curr;
     Iterator result(curr->next);
     delete target;
+    size--;                 //Gabriel Phase III adding decrement operation to function 11/28/25
+
     return result;
 }
 

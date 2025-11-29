@@ -13,6 +13,9 @@ private:
     Node* head;
     Node* tail;
 
+    int size;         //Gabriel Phase III step 3: adding size data member to track nodes 11/28/25
+
+
 public:
     List();
     ~List();
