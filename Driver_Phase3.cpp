@@ -46,6 +46,73 @@ void testClearFunction() {
     cout << "=== CLEAR FUNCTION TEST COMPLETED ===" << endl << endl;
 }
 
+// PHASE 3 STEP 7: Test insertAfter and eraseAfter functions
+void testInsertEraseAfter() {
+    cout << "=== INSERT/ERASE AFTER ===" << endl;
+    List lst;
+    lst.push_back(House(800, 1980));
+    lst.push_back(House(1200, 1995));
+    Iterator it = lst.begin();
+    lst.insertAfter(it, House(1000, 1990));
+    cout << "After insertAfter: "; lst.print();
+    lst.eraseAfter(it);
+    cout << "After eraseAfter:  "; lst.print();
+    cout << endl;
+}
+
+// PHASE 3 STEP 7: Test front function
+void testFront() {
+    cout << "=== FRONT ===" << endl;
+    List lst;
+    lst.push_back(House(600, 1970));
+    lst.push_back(House(900, 1990));
+    cout << "List: "; lst.print();
+    cout << "Front: "; lst.front().print();
+    cout << endl;
+}
+
+// PHASE 3 STEP 7: Test duplicate function
+void testDuplicateFunction() {
+    cout << "=== DUPLICATE ===" << endl;
+    List a;
+    a.push_back(House(700, 1920));
+    a.push_back(House(900, 1940));
+    a.push_back(House(1200, 1950));
+    List b;
+    a.duplicate(b);
+    cout << "Original: "; a.print();
+    cout << "Copy:     "; b.print();
+    cout << "Sizes => A: " << a.getSize() << ", B: " << b.getSize() << endl;
+    // Verify element-by-element equivalence
+    Iterator ia = a.begin();
+    Iterator ib = b.begin();
+    bool allEq = true;
+    while (ia.hasNext() && ib.hasNext()) {
+        if (!equivalence(ia.getData(), ib.getData())) { allEq = false; break; }
+        ia.next(); ib.next();
+    }
+    cout << "Equivalent copies: " << (allEq ? "Yes" : "No") << endl << endl;
+}
+
+// PHASE 3 STEP 7: Test find function
+void testFindFunctionPhase3() {
+    cout << "=== FIND ===" << endl;
+    List lst;
+    lst.push_back(House(700, 1920));
+    lst.push_back(House(900, 1940));
+    lst.push_back(House(1200, 1950));
+    cout << "List: "; lst.print();
+    House target1(900, 1940);
+    Iterator r1 = lst.find(target1);
+    cout << "Searching 900,1940: ";
+    if (r1.hasNext()) { r1.getData().print(); } else { cout << "Not found" << endl; }
+    House target2(1500, 2000);
+    Iterator r2 = lst.find(target2);
+    cout << "Searching 1500,2000: ";
+    if (r2.hasNext()) { r2.getData().print(); } else { cout << "Not found" << endl; }
+    cout << endl;
+}
+
 // PHASE 3 STEP 6: Test sortedInsert algorithm
 void testSortedInsert() {
     cout << "=== PHASE 3 STEP 6: TESTING SORTEDINSERT ALGORITHM ===" << endl;
@@ -324,6 +391,12 @@ int main() {
 
     // Phase 3 Step 5: Clear function tests
     testClearFunction();
+    // Phase 3 Step 7: insertAfter/eraseAfter tests
+    testInsertEraseAfter();
+    // Phase 3 Step 7: front/duplicate/find tests
+    testFront();
+    testDuplicateFunction();
+    testFindFunctionPhase3();
     
     // Phase 3 Step 6: Algorithm tests
     testSortedInsert();

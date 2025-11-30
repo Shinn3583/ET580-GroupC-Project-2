@@ -57,7 +57,7 @@ B. Files : Contributors
 21→Commit 21 Zhiyi Chen 11/29 Phase3 Step5 completed: implemented clear function in list.h and list.cpp to reset the pointer and size to 0
 22.Commit 22 Sikder Ishaq 11/29 Phase III Task 6 completed: implemented static algorithms in List 
 23.Commit 23 Zhiyi Chen 11/29 Phase 3 step 7 Driver_phase3.cpp finished.
-24. Commit 24. Sikder 11/30 phase 3 make file 
+24. Commit 24. Sikder 11/30 phase 3 make file and small fixes
 C. Known Problems or Incomplete Code
 
 - 11/15 – Phase I Tasks 8 and 9 (Sikder Ishaq) ---

@@ -134,6 +134,7 @@ void List::duplicate(List &other) const {
     }
     other.head = nullptr;
     other.tail = nullptr;
+    other.size = 0;  // reset size counter for destination
 
     // Copy nodes from this list
     Node* src = head;
@@ -147,6 +148,7 @@ void List::duplicate(List &other) const {
         }
         last = n;
         src = src->next;
+        other.size++;  // track copied nodes
     }
     other.tail = last;
 }
