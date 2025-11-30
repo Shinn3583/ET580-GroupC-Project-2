@@ -5,6 +5,10 @@
 #Zhiyi Chen 11/18 Commit 11
 #Zhiyi Chen 11/18 update makefile 
 #Sikder Ishaq — comments added 11/28: Phase 3 driver target and clean rules
+.PHONY: all clean prog prog1 prog3 run
+
+all: prog3
+
 prog : Driver_Phase2.o Node.o Iterator.o List.o House.o
     g++ -std=c++11 -o prog Driver_Phase2.o Node.o Iterator.o List.o House.o
 
@@ -38,5 +42,8 @@ House.o : House.h
 
 # files to remove
 clean:
-    rm -f Driver_Phase1.o Driver_Phase2.o Driver_Phase3.o Node.o Iterator.o List.o House.o
-    rm -f prog prog1 prog3
+    rm -f Driver_Phase1.o Driver_Phase2.o Driver_Phase3.o Node.o Iterator.o List.o House.o || del /Q Driver_Phase1.o Driver_Phase2.o Driver_Phase3.o Node.o Iterator.o List.o House.o
+    rm -f prog prog1 prog3 || del /Q prog.exe prog1.exe prog3.exe
+
+run: prog3
+    ./prog3
