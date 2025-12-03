@@ -1,49 +1,35 @@
-#Zhiyi Chen 11/11 Commit 1
-# executable file to create and its dependancies
-#Gabriel fixing MakeFile errors (improper syntax and file names for driver) 11/14/25
-#Gabriel fixing Makefile again syntax
-#Zhiyi Chen 11/18 Commit 11
-#Zhiyi Chen 11/18 update makefile 
-#Sikder Ishaq — comments added 11/28: Phase 3 driver target and clean rules
-.PHONY: all clean prog prog1 prog3 run
-
-all: prog3
-
-prog : Driver_Phase2.o Node.o Iterator.o List.o House.o
-    g++ -std=c++11 -o prog Driver_Phase2.o Node.o Iterator.o List.o House.o
+# Zhiyi Chen 11/11 Commit 1
+# Gabriel fixing MakeFile errors 11/14/25
+# Zhiyi Chen 11/18 update makefile
+# Sikder Ishaq comments added 11/28
+# Zhiyi Chen 11/29 fixed makefile
+# executable file to create and its dependencies
+prog3: driver_phase3.o Node.o Iterator.o List.o House.o
+	 g++ -std=c++11 -o prog3 Node.o Iterator.o List.o House.o driver_phase3.o
 
 # file dependencies
-Driver_Phase2.o : List.h Iterator.h Node.h 
-    g++ -std=c++11 -c Driver_Phase2.cpp
+driver_phase1.o: driver_phase1.cpp List.h Node.h Iterator.h
+	 g++ -std=c++11 -c driver_phase1.cpp
 
-Driver_Phase3.o : List.h Iterator.h Node.h 
-    g++ -std=c++11 -c Driver_Phase3.cpp
+List.o: List.cpp Node.h Iterator.h List.h
+	 g++ -std=c++11 -c List.cpp
 
-Driver_Phase1.o : List.h Iterator.h Node.h 
-    g++ -std=c++11 -c Driver_Phase1.cpp
-        
-prog1 : Driver_Phase1.o Node.o Iterator.o List.o House.o
-    g++ -std=c++11 -o prog1 Driver_Phase1.o Node.o Iterator.o List.o House.o
+Iterator.o: Iterator.cpp Iterator.h
+	 g++ -std=c++11 -c Iterator.cpp
 
-prog3 : Driver_Phase3.o Node.o Iterator.o List.o House.o
-    g++ -std=c++11 -o prog3 Driver_Phase3.o Node.o Iterator.o List.o House.o
+Node.o: Node.cpp Node.h
+	 g++ -std=c++11 -c Node.cpp
 
-List.o : Node.h Iterator.h List.h
-	g++ -std=c++11 -c List.cpp
+driver_phase2.o: driver_phase2.cpp List.h Node.h Iterator.h House.h
+	 g++ -std=c++11 -c driver_phase2.cpp
 
-Iterator.o : Iterator.h Node.h
-	g++ -std=c++11 -c Iterator.cpp
+driver_phase3.o: driver_phase3.cpp List.h Node.h Iterator.h House.h
+	 g++ -std=c++11 -c driver_phase3.cpp
 
-Node.o : Node.h
-	g++ -std=c++11 -c Node.cpp
-
-House.o : House.h 
-	g++ -std=c++11 -c House.cpp 
+House.o: House.cpp House.h
+	 g++ -std=c++11 -c House.cpp
 
 # files to remove
 clean:
-    rm -f Driver_Phase1.o Driver_Phase2.o Driver_Phase3.o Node.o Iterator.o List.o House.o || del /Q Driver_Phase1.o Driver_Phase2.o Driver_Phase3.o Node.o Iterator.o List.o House.o
-    rm -f prog prog1 prog3 || del /Q prog.exe prog1.exe prog3.exe
-
-run: prog3
-    ./prog3
+	 rm -f Node.o Iterator.o List.o driver_phase3.o House.o
+	 rm -f prog3
